@@ -32,6 +32,10 @@ const userSchema = new mongoose.Schema({
         type : String,
         required : true
     },
+    whatsApp : {
+        type : String,
+        required : true
+    },
 });
 
 const User = mongoose.model("User",userSchema)   //mongo DB එකේ collection එකයි, backend එකයි අතර connection එක හදනවා.
