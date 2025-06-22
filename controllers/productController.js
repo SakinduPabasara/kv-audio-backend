@@ -8,7 +8,7 @@ export function addProduct(req,res){
         res.status(401).json({
             message : "Please login and try again"
         })
-        return
+        return    // මෙතෙනදී return කරන්නෙ, function එකෙන් ඉවත් වෙන්න. එහෙම නැති උනොත්, code එක ඉදිරියට execute වෙනවා දිගටම.
     }
     if(req.user.role !="admin"){
         res.status(403).json({
