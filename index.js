@@ -7,10 +7,17 @@ import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 import reviewRouter from "./routes/reviewRouter.js";
 import inquiryRouter from "./routes/inquiryRouter.js";
+import cors from "cors";
 
 dotenv.config()  //load env variables
 
-const app = express()
+const app = express();
+
+
+//CORS (Cross-Origin Resource Sharing) is a security feature implemented by web browsers to prevent
+app.use(cors());    // Enable CORS for all routes 
+    
+
 
 app.use(bodyParser.json());   //middlewear
 
