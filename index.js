@@ -79,6 +79,7 @@ import dotenv from "dotenv";
 import reviewRouter from "./routes/reviewRouter.js";
 import inquiryRouter from "./routes/inquiryRouter.js";
 import cors from "cors";
+import orderRouter from "./routes/orderRouter.js";
 
 dotenv.config();
 
@@ -141,6 +142,7 @@ app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
 app.use("/api/reviews", reviewRouter);
 app.use("/api/inquiries", inquiryRouter);
+app.use("/api/orders", orderRouter);  // Added order routes
 
 /* =========================
    Render Port Fix (IMPORTANT)
@@ -150,3 +152,8 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log("Server is running on port", PORT);
 });
+
+
+//"email": "sakindu1@gmail.com", "password": "123", - Customer
+//"email": "sakindu3@gmail.com", "password": "123", - Customer
+//"email": "sakindu2@gmail.com", "password": "123", - Admin
